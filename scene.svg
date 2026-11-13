@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" width="960" height="270" shape-rendering="crispEdges">
+  <defs>
+    <!-- Spettatori base: testa e spalle -->
+    <g id="hdA">
+      <rect x="0" y="8" width="12" height="5" fill="#dc2626"/>
+      <rect x="2" y="0" width="8" height="8" fill="#f1c27d"/>
+      <rect x="2" y="0" width="8" height="3" fill="#111827"/>
+      <rect x="4" y="4" width="1" height="1" fill="#111"/>
+      <rect x="7" y="4" width="1" height="1" fill="#111"/>
+    </g>
+    <g id="hdB">
+      <rect x="0" y="8" width="12" height="5" fill="#2563eb"/>
+      <rect x="2" y="0" width="8" height="8" fill="#e0a96d"/>
+      <rect x="2" y="0" width="8" height="3" fill="#b45309"/>
+      <rect x="4" y="4" width="1" height="1" fill="#111"/>
+      <rect x="7" y="4" width="1" height="1" fill="#111"/>
+    </g>
+    <g id="hdC">
+      <rect x="0" y="8" width="12" height="5" fill="#16a34a"/>
+      <rect x="2" y="0" width="8" height="8" fill="#f5d0a9"/>
+      <rect x="2" y="0" width="8" height="3" fill="#facc15"/>
+      <rect x="4" y="4" width="1" height="1" fill="#111"/>
+      <rect x="7" y="4" width="1" height="1" fill="#111"/>
+    </g>
+    <g id="hdD">
+      <rect x="0" y="8" width="12" height="5" fill="#f8fafc"/>
+      <rect x="2" y="0" width="8" height="8" fill="#8d5524"/>
+      <rect x="2" y="0" width="8" height="3" fill="#3f2a14"/>
+      <rect x="4" y="4" width="1" height="1" fill="#111"/>
+      <rect x="7" y="4" width="1" height="1" fill="#111"/>
+    </g>
+
+    <!-- Versioni con braccia alzate (frame 2) -->
+    <g id="hdAup">
+      <use href="#hdA"/>
+      <rect x="-2" y="0" width="2" height="6" fill="#f1c27d"/>
+      <rect x="12" y="0" width="2" height="6" fill="#f1c27d"/>
+    </g>
+    <g id="hdBup">
+      <use href="#hdB"/>
+      <rect x="-2" y="0" width="2" height="6" fill="#e0a96d"/>
+      <rect x="12" y="0" width="2" height="6" fill="#e0a96d"/>
+    </g>
+    <g id="hdCup">
+      <use href="#hdC"/>
+      <rect x="-2" y="0" width="2" height="6" fill="#f5d0a9"/>
+      <rect x="12" y="0" width="2" height="6" fill="#f5d0a9"/>
+    </g>
+    <g id="hdDup">
+      <use href="#hdD"/>
+      <rect x="-2" y="0" width="2" height="6" fill="#8d5524"/>
+      <rect x="12" y="0" width="2" height="6" fill="#8d5524"/>
+    </g>
+
+    <!-- Muro di pubblico, frame 1 (fermo) -->
+    <pattern id="wall1" patternUnits="userSpaceOnUse" x="0" y="10" width="96" height="40">
+      <use href="#hdA" x="8" y="4"/>
+      <use href="#hdB" x="32" y="4"/>
+      <use href="#hdC" x="56" y="4"/>
+      <use href="#hdD" x="80" y="4"/>
+      <use href="#hdC" x="20" y="24"/>
+      <use href="#hdA" x="44" y="24"/>
+      <use href="#hdD" x="68" y="24"/>
+    </pattern>
+
+    <!-- Muro di pubblico, frame 2 (braccia alzate) -->
+    <pattern id="wall2" patternUnits="userSpaceOnUse" x="480" y="10" width="96" height="40">
+      <use href="#hdAup" x="8" y="2"/>
+      <use href="#hdB" x="32" y="4"/>
+      <use href="#hdCup" x="56" y="2"/>
+      <use href="#hdDup" x="80" y="4"/>
+      <use href="#hdC" x="20" y="22"/>
+      <use href="#hdAup" x="44" y="22"/>
+      <use href="#hdD" x="68" y="24"/>
+    </pattern>
+
+    <!-- Il ring: luci, tappeto, pali, corde -->
+    <g id="ring">
+      <rect x="88" y="8" width="24" height="6" fill="#facc15"/>
+      <rect x="368" y="8" width="24" height="6" fill="#facc15"/>
+
+      <rect x="0" y="200" width="480" height="70" fill="#44403c"/>
+      <rect x="0" y="200" width="480" height="4" fill="#57534e"/>
+      <rect x="0" y="236" width="480" height="2" fill="#292524"/>
+      <rect x="0" y="196" width="480" height="4" fill="#78716c"/>
+
+      <rect x="50" y="110" width="6" height="90" fill="#e5e7eb"/>
+      <rect x="424" y="110" width="6" height="90" fill="#e5e7eb"/>
+      <rect x="50" y="110" width="6" height="2" fill="#9ca3af"/>
+      <rect x="424" y="110" width="6" height="2" fill="#9ca3af"/>
+
+      <rect x="56" y="130" width="368" height="4" fill="#ef4444"/>
+      <rect x="56" y="150" width="368" height="4" fill="#f8fafc"/>
+      <rect x="56" y="170" width="368" height="4" fill="#3b82f6"/>
+
+      <rect x="48" y="128" width="10" height="46" fill="#7f1d1d"/>
+      <rect x="422" y="128" width="10" height="46" fill="#1e3a8a"/>
+
+      <rect x="200" y="216" width="80" height="12" fill="#facc15"/>
+      <rect x="204" y="220" width="72" height="4" fill="#44403c"/>
+    </g>
+  </defs>
+
+  <!-- FRAME 1 (x 0-479): pubblico fermo -->
+  <rect x="0" y="0" width="480" height="270" fill="#0f172a"/>
+  <rect x="0" y="10" width="480" height="190" fill="url(#wall1)"/>
+  <use href="#ring" x="0" y="0"/>
+
+  <!-- FRAME 2 (x 480-959): pubblico che si muove -->
+  <rect x="480" y="0" width="480" height="270" fill="#0f172a"/>
+  <rect x="480" y="10" width="480" height="190" fill="url(#wall2)"/>
+  <use href="#ring" x="480" y="0"/>
+</svg>
